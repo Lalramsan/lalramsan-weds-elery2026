@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lalramsan & Elery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #fffafa;
+            color: #8b0000;
+            text-align: center;
+        }
+
+        .opening {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 55px;
+            opacity: 0.8;
+        }
+
+        .flower.one {
+            top: 25px;
+            left: 20px;
+        }
+
+        .flower.two {
+            top: 25px;
+            right: 20px;
+        }
+
+        .flower.three {
+            bottom: 25px;
+            left: 20px;
+        }
+
+        .flower.four {
+            bottom: 25px;
+            right: 20px;
+        }
+
+        .small-text {
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 5px 0;
+            font-weight: normal;
+        }
+
+        .and {
+            font-size: 28px;
+            margin: 5px 0;
+            color: #b22222;
+        }
+
+        .date {
+            font-size: 19px;
+            margin-top: 25px;
+            letter-spacing: 2px;
+        }
+
+        .tap {
+            margin-top: 45px;
+            padding: 14px 30px;
+            border: 1px solid #8b0000;
+            border-radius: 30px;
+            color: white;
+            background: #8b0000;
+            font-size: 16px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .details {
+            min-height: 100vh;
+            padding: 80px 25px;
+            background: white;
+        }
+
+        .details h2 {
+            font-size: 32px;
+            font-weight: normal;
+        }
+
+        .line {
+            width: 80px;
+            height: 2px;
+            background: #8b0000;
+            margin: 20px auto;
+        }
+
+        .info {
+            font-size: 19px;
+            line-height: 1.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="opening">
+
+        <div class="flower one">🌹</div>
+        <div class="flower two">🌹</div>
+        <div class="flower three">🌹</div>
+        <div class="flower four">🌹</div>
+
+        <div class="small-text">
+            Together with their families
+        </div>
+
+        <h1>Lalramsan</h1>
+
+        <div class="and">&</div>
+
+        <h1>Elery</h1>
+
+        <div class="date">
+            12 November 2026
+        </div>
+
+        <button class="tap" onclick="openInvitation()">
+            Tap to Open
+        </button>
+
+    </section>
+
+
+    <section class="details" id="invitation">
+
+        <h2>We Are Getting Married</h2>
+
+        <div class="line"></div>
+
+        <div class="info">
+            <strong>Lalramsan & Elery</strong><br><br>
+
+            12 November 2026<br>
+
+            11:30 AM<br><br>
+
+            EFCI Church, Saipum<br>
+
+            Kolasib, Mizoram
+        </div>
+
+    </section>
+
+
+    <script>
+        function openInvitation() {
+            document.getElementById("invitation").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+</html>
